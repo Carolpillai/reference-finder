@@ -15,6 +15,7 @@ export default function KeywordTags({ keywords, onTagClick }: KeywordTagsProps) 
       {keywords.map((keyword, i) => (
         <button
           key={i}
+          suppressHydrationWarning={true}
           onClick={() => onTagClick?.(keyword)}
           className="px-4 py-1.5 bg-neutral-900 border border-neutral-800 text-neutral-300 text-sm rounded-full transition-colors hover:bg-neutral-800 hover:text-neutral-100 cursor-pointer focus:outline-none focus:ring-2 focus:ring-neutral-700"
         >

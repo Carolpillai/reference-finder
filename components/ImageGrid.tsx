@@ -58,6 +58,7 @@ function ImageCard({ image, onClick }: { image: UnsplashImage; onClick: () => vo
   return (
     <div 
       onClick={onClick}
+      suppressHydrationWarning={true}
       className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-neutral-900 group cursor-pointer"
     >
       {/* Fallback skeleton if image takes time to load */}

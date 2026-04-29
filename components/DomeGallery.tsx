@@ -683,6 +683,7 @@ export default function DomeGallery({
               >
                 <div
                   className="item__image"
+                  suppressHydrationWarning={true}
                   role="button"
                   tabIndex={0}
                   aria-label={it.alt || 'Open image'}

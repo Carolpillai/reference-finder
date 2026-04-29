@@ -82,6 +82,7 @@ export default function ImageModal({ image, onClose }: ImageModalProps) {
       <div className="relative z-[101] w-full max-w-5xl max-h-[90vh] flex flex-col items-center justify-center rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 shadow-2xl">
         <button 
           onClick={onClose}
+          suppressHydrationWarning={true}
           className="absolute top-4 right-4 p-2 bg-black/50 hover:bg-black/80 text-white rounded-full transition-colors backdrop-blur-md z-[102]"
         >
           <X className="w-5 h-5" />
@@ -104,6 +105,7 @@ export default function ImageModal({ image, onClose }: ImageModalProps) {
           <div className="flex items-center gap-3 w-full sm:w-auto">
             <button
               onClick={handleCopy}
+              suppressHydrationWarning={true}
               disabled={isCopying}
               className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-neutral-100 rounded-xl transition-colors text-sm font-medium disabled:opacity-50"
             >
@@ -112,6 +114,7 @@ export default function ImageModal({ image, onClose }: ImageModalProps) {
             </button>
             <button
               onClick={handleDownload}
+              suppressHydrationWarning={true}
               disabled={isDownloading}
               className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 py-2 bg-white hover:bg-neutral-200 text-black rounded-xl transition-colors text-sm font-medium disabled:opacity-50"
             >
