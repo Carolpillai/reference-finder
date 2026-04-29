@@ -23,14 +23,14 @@ export async function POST(request: Request) {
       );
     }
 
-    // To prevent hitting rate limits too quickly, we will take the top 4 keywords
-    // and fetch 2 images per keyword, yielding up to 8 images.
-    const topKeywords = keywords.slice(0, 4);
+    // To prevent hitting rate limits too quickly, we will take the top 2 keywords
+    // and fetch 4 images per keyword, yielding up to 8 images with fewer API calls.
+    const topKeywords = keywords.slice(0, 2);
 
     const imagePromises = topKeywords.map(async (keyword) => {
       const result = await unsplash.search.getPhotos({
         query: keyword,
-        perPage: 2,
+        perPage: 4,
         orientation: "landscape",
       });
 
