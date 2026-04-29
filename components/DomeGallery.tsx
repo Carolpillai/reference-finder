@@ -335,8 +335,8 @@ export default function DomeGallery({
   useEffect(() => {
     let autoRotateRAF: any;
     const step = () => {
-      if (!draggingRef.current && !openingRef.current && performance.now() - lastDragEndAt.current > 1500) {
-        const nextY = wrapAngleSigned(rotationRef.current.y + 0.04);
+      if (!draggingRef.current && !openingRef.current && performance.now() - lastDragEndAt.current > 2000) {
+        const nextY = wrapAngleSigned(rotationRef.current.y + 0.01);
         rotationRef.current.y = nextY;
         applyTransform(rotationRef.current.x, nextY);
       }

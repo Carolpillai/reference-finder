@@ -78,9 +78,8 @@ export default function SearchInput({ value, onChange, onSearch, isLoading }: Se
         type="submit"
         disabled={!value.trim() || isLoading}
         className={cn(
-          "absolute inset-y-2 right-2 px-4 bg-neutral-800 hover:bg-neutral-700 text-neutral-200 rounded-xl transition-colors",
-          "disabled:opacity-50 disabled:cursor-not-allowed",
-          "font-medium text-sm"
+          "absolute inset-y-2 right-2 px-6 bg-white hover:bg-neutral-200 text-black rounded-xl transition-colors shadow-lg font-semibold",
+          "disabled:opacity-50 disabled:cursor-not-allowed text-sm"
         )}
       >
         {isLoading ? "Searching..." : "Search"}

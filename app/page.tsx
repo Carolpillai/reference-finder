@@ -109,16 +109,13 @@ export default function Home() {
 
   return (
     <main className={`flex flex-col items-center pt-12 sm:pt-20 bg-[#0a0a0a] ${showGrid ? "min-h-screen pb-20" : "h-screen overflow-hidden"}`}>
-      <div className="w-full max-w-4xl text-center mb-8 px-4 sm:px-6 z-40 relative">
-        <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight mb-4 text-neutral-100">
-          Reference Finder
+      <div className="w-full max-w-2xl text-center mb-8 px-4 sm:px-6 z-40 relative">
+        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-3 text-neutral-100">
+          Refnix
         </h1>
-        <p className="text-neutral-400 text-lg">
+        <p className="text-neutral-400 text-sm sm:text-base max-w-md mx-auto mb-6">
           Describe an abstract idea. We&apos;ll translate it into visual keywords and find the right references.
         </p>
-      </div>
-
-      <div className="w-full flex flex-col items-center z-40 relative px-4 sm:px-6">
         <SearchInput
           value={prompt}
           onChange={setPrompt}
